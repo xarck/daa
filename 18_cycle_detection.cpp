@@ -42,7 +42,6 @@ int main(){
     Graph g2(3);
     g2.addEdge(0, 1);
     g2.addEdge(1, 2);
-    g2.addEdge(2, 0);
     g2.isCyclic() ? cout << "Graph contains cycle\n"
                   : cout << "Graph doesn't contain cycle\n";
 }

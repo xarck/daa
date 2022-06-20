@@ -15,10 +15,9 @@ class Graph
     {
         
         visited[v] = true;
-        list<int>::iterator i;
-        for (i = adj[v].begin(); i != adj[v].end(); ++i)
-            if (!visited[*i])
-                DFSUtil(*i, visited);
+        for (auto i: adj[v])
+            if (!visited[i])
+                DFSUtil(i, visited);
     }
     void addEdge(int v, int w)
     {

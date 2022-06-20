@@ -22,7 +22,6 @@ int main(){
      for(int i=0;i<n;i++){
         properweight.push_back((float)profit[i]/weight[i]);
     }
-    vector<pair<float,pair<int,int>>> ppi;
     priority_queue<pair<float,pair<int,int>>> maxHeap;
     
 
@@ -45,8 +44,5 @@ int main(){
         }
         maxHeap.pop();
     }
-
     cout<< totalProfit;
-
-
 }
