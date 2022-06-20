@@ -87,6 +87,27 @@ class Graph{
         }
         return false;
     }
+
+    bool isReachable(int s,int d){
+        if(s==d) return true;
+        vector<bool> visited(numVertices,false);
+        list<int> queue;
+        visited[s] = true;
+        queue.push_back(s);
+        while(!q.empty()){
+            s = queue.front();
+            queue.pop_front();
+
+            for(auto i: adjList[s]){
+                if(i==d) return true;
+                if(!visited[i]){
+                    visited[i] = true;
+                    queue.push_back(i);
+                }
+            }
+        }
+    }
+    return false;
 };
 
 int main(){
